@@ -15,4 +15,7 @@ export class LandingPageComponent implements OnInit {
   goRegister() {
     this.router.navigate(['/register']);
   }
+  goLogout() {
+    this.router.navigate(['/logout']);
+  }
 }

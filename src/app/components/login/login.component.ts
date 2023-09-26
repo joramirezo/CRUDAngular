@@ -19,10 +19,17 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('/dashboard');
     }
   }
+  async cerrarSesion(idUsuario: number, sesion: boolean) {
+    await this.authService.getLogout(idUsuario);
+    this.router.navigateByUrl('/home');
+  }
   goLogin() {
     this.router.navigate(['/login']);
   }
   goRegister() {
     this.router.navigate(['/register']);
+  }
+  goLogout() {
+    this.router.navigate(['/logout']);
   }
 }
